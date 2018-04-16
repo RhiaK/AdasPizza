@@ -1,0 +1,18 @@
+<!-- When rendered in the browser, the /pizza view should:
+  - have a list of every pizza flavor
+  - the pizza flavors should also have the location and the picture
+--> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizzas</title>
+</head>
+<body>
+	<h1>List of all Pizzas</h1>
+	<div class="more">
+		<p>Flavor: <%= pizzas.flavor %></p>
+		<p>Location: <%= pizzas.location %></p>
+		<img src=<%=pizzas.image%>> 
+	</div>
+</body>
+</html>
