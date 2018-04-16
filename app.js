@@ -23,8 +23,9 @@ app.get("/pizzas", function(req,res){
 });
 
 app.get("/pizzas/:id", function(req,res){
-	// let pizza = req.query.
-	res.render('pizza/pizza-single.ejs');
+	console.log(req.params.id);
+	let arrPizza = pizzas.filter(pizza => pizza.flavorKey == req.params.id);
+	res.render('pizza/pizza-single.ejs', {pizzas: arrPizza});
 });
 
 /* error handler */
