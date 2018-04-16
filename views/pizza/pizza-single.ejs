@@ -10,9 +10,11 @@
 <body>
 	<h1>Pizza</h1>
 	<div class="more">
-		<p>Flavor: <%= pizzas.flavor %></p>
-		<p>Location: <%= pizzas.location %></p>
+		<% for (i=0; i < pizzas.length; i++) { %>
+		<p>Flavor: <%= pizzas[i].flavor %></p>
+		<p>Location: <%= pizzas[i].location %></p>
 		<img src=<%=pizzas.image%>> 
+		<% } %>
 	</div>
 </body>
 </html>

@@ -6,11 +6,6 @@ const logger = require('morgan');
 const app = express();
 
 
-console.log(pizzas);
-
-console.log(pizzas);
-
-
 /* set the view engine */
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -23,14 +18,14 @@ app.get("/index", function(req,res){
 	res.render('index.ejs', {pizzas: pizzas});
 });
 
-// app.get("/pizzas", function(req,res){
-// 	res.render('pizza/pizza-index.ejs', {pizzas: pizzas});
-// });
+app.get("/pizzas", function(req,res){
+	res.render('pizza/pizza-index.ejs', {pizzas: pizzas});
+});
 
-// app.get("/pizzas/", function(req,res){
-// 	let pizza = req.query.
-// 	res.render('pizza/pizza-index.ejs/:id', {pizzas: pizzas});
-// });
+app.get("/pizzas/:id", function(req,res){
+	// let pizza = req.query.
+	res.render('pizza/pizza-single.ejs');
+});
 
 /* error handler */
 app.get('*', function(req, res) {
